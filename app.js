@@ -57,7 +57,7 @@ app.post('/api', upload.single('image'), async (req, res) => {
         const image = [fileToGenerativePart(imageFile.buffer, imageFile.mimetype)];
 
         const result = await model.generateContent([template, ...image]);
-        const response = await result.response;
+        const response = result.response;
         const text = response.text();
 
         console.log('Generated text:', text);
