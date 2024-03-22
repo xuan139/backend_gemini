@@ -1,52 +1,43 @@
-# Gemini Vision Pro API with Multimodal Prompts Integration with JavaScript (Node.js & Express.js)
+# Installing Node Using the Node Version Manager
+Another way of installing Node.js that is particularly flexible is to use nvm, the Node Version Manager. This piece of software allows you to install and maintain many different independent versions of Node.js, and their associated Node packages, at the same time.
 
-This project implements the Gemini Pro Vision LLM (Google Generative AI) library to process text and images together, producing relevant text responses. The Gemini Pro Vision model excels at multimodal tasks, including visual understanding, classification, summarization, and content creation from images and videos.
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
+source ~/.bashrc
+nvm list-remote
+nvm install v20.11.1
+nvm list
+nvm use v20.11.1
 
-![image](./postman.png)
+# Removing Node.js
+You can uninstall Node.js using apt or nvm, depending on how it was installed. To remove the version from the system repositories, use apt remove:
 
-## About Gemini Vision Pro
+sudo apt remove nodejs
+sudo apt purge nodejs
+nvm current
+nvm uninstall node_version
 
-Gemini Pro Vision is a versatile large language vision model that interprets input from text and visual modalities (images and videos) to generate contextually relevant text responses. It serves as a foundational model capable of performing well across various multimodal tasks, such as visual understanding, object identification, content extraction from images, and much more. Its applications extend to processing visual and text inputs from photographs, documents, infographics, screenshots, and more.
+# install nginx basic
+https://www.digitalocean.com/community/tutorials/how-to-install-nginx-on-ubuntu-20-04
 
-## Use Cases
+sudo apt update
+sudo apt install nginx
 
-- **Visual Information Seeking:** Utilize external knowledge combined with information extracted from the input image or video to answer questions.
-- **Object Recognition:** Answer questions related to fine-grained identification of objects in images and videos.
-- **Digital Content Understanding:** Answer questions and extract information from visual content like infographics, charts, figures, tables, and web pages.
-- **Structured Content Generation:** Generate responses based on multimodal inputs in formats like HTML and JSON.
-- **Captioning and Description:** Generate descriptions of images and videos with varying levels of details.
-- **Reasoning:** Compositionally infer new information without memorization or retrieval.
+sudo ufw app list
 
+sudo ufw allow 'Nginx HTTP'
 
-## Installation
+sudo ufw status
 
-1. Clone the repository
-2. Install the dependencies
-   ```sh
-   npm install
-   ```
+systemctl status nginx
 
-## Usage
+To stop your web server, type:
 
-1. Add your Google API key to the `.env` file
-   ```env
-   GOOGLE_API_KEY=your_google_api_key
-   ```
-2. Run the script with Node.js
-   ```sh
-   node index.js
-   ```
-3. Or use API in Postman
-   ```sh
-   npm start
-   ```
+sudo systemctl stop nginx
+To start the web server when it is stopped, type:
 
-## Functionality
-The script uses the Google Generative AI library to generate content based on a template and an image. The `model.generateContent` function is used to generate the content. It takes an array as an argument, which includes the template and the image data. The generated content is then logged to the console or sent in API response.
+sudo systemctl start nginx
+To stop and then start the service again, type:
 
-## Snapshots
+sudo systemctl restart nginx
 
-![image](./postman.png)
-
-![image](./terminal.png)
-# backend_gemini
