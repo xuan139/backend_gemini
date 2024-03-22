@@ -2,12 +2,19 @@
 Another way of installing Node.js that is particularly flexible is to use nvm, the Node Version Manager. This piece of software allows you to install and maintain many different independent versions of Node.js, and their associated Node packages, at the same time.
 
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh
+
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
+
 source ~/.bashrc
+
 nvm list-remote
+
 nvm install v20.11.1
+
 nvm list
+
 nvm use v20.11.1
+
 
 # Removing Node.js
 You can uninstall Node.js using apt or nvm, depending on how it was installed. To remove the version from the system repositories, use apt remove:
