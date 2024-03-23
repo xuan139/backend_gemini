@@ -1,3 +1,6 @@
+# serveo.net
+ssh -R 80:localhost:8888 -R 80:localhost:9999 serveo.net
+
 # Installing Node Using the Node Version Manager
 Another way of installing Node.js that is particularly flexible is to use nvm, the Node Version Manager. This piece of software allows you to install and maintain many different independent versions of Node.js, and their associated Node packages, at the same time.
 
@@ -20,9 +23,13 @@ nvm use v20.11.1
 You can uninstall Node.js using apt or nvm, depending on how it was installed. To remove the version from the system repositories, use apt remove:
 
 sudo apt remove nodejs
+
 sudo apt purge nodejs
+
 nvm current
+
 nvm uninstall node_version
+
 
 # install nginx basic
 https://www.digitalocean.com/community/tutorials/how-to-install-nginx-on-ubuntu-20-04
@@ -47,4 +54,14 @@ sudo systemctl start nginx
 To stop and then start the service again, type:
 
 sudo systemctl restart nginx
+
+# install pm2
+npm install -g pm2
+pm2 --version
+pm2 start app.js
+pm2 status
+pm2 logs app
+pm2 restart app
+pm2 stop app
+
 
