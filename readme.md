@@ -35,6 +35,7 @@ nvm uninstall node_version
 https://www.digitalocean.com/community/tutorials/how-to-install-nginx-on-ubuntu-20-04
 
 sudo apt update
+
 sudo apt install nginx
 
 sudo ufw app list
@@ -45,7 +46,7 @@ sudo ufw status
 
 systemctl status nginx
 
-To stop your web server, type:
+# To stop your web server, type:
 
 sudo systemctl stop nginx
 To start the web server when it is stopped, type:
