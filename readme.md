@@ -56,12 +56,19 @@ To stop and then start the service again, type:
 sudo systemctl restart nginx
 
 # install pm2
+
 npm install -g pm2
+
 pm2 --version
+
 pm2 start app.js
+
 pm2 status
+
 pm2 logs app
+
 pm2 restart app
+
 pm2 stop app
 
 
