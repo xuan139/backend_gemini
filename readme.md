@@ -1,5 +1,5 @@
 # serveo.net
-ssh -R 80:localhost:8888 -R 80:localhost:9999 serveo.net
+ssh -R 80:localhost:3000 serveo.net
 
 # Installing Node Using the Node Version Manager
 Another way of installing Node.js that is particularly flexible is to use nvm, the Node Version Manager. This piece of software allows you to install and maintain many different independent versions of Node.js, and their associated Node packages, at the same time.
