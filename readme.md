@@ -46,15 +46,15 @@ sudo ufw status
 
 systemctl status nginx
 
-# To stop your web server, type:
+## To stop your web server, type:
 
 sudo systemctl stop nginx
 
-# To start the web server when it is stopped, type:
+## To start the web server when it is stopped, type:
 
 sudo systemctl start nginx
 
-# To stop and then start the service again, type:
+## To stop and then start the service again, type:
 
 sudo systemctl restart nginx
 
