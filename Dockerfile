@@ -22,7 +22,7 @@ COPY nginx.conf /etc/nginx/nginx.conf
 
 
 
-RUN certbot --nginx --agree-tos --email 　lixuan2001@gmail.com -d www.kegenai.com
+RUN certbot --nginx --agree-tos --email lixuan2001@gmail.com -d www.kegenai.com
 
 # 设置容器启动命令
 
